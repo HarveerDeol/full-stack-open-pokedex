@@ -24,3 +24,9 @@ jobs:
       - name: Print directory
         run: |
             ls -l
+  lint_job:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: lint
+        run: |
+            npm run eslint
