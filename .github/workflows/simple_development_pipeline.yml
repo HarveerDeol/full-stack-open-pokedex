@@ -5,7 +5,7 @@ on:
     branches:
       - main
 jobs:
-    lint_job:
+    simple_deployment_pipeline:
         runs-on: ubuntu-22.04
         steps:
             - uses: actions/checkout@v4
@@ -16,13 +16,8 @@ jobs:
               run: npm install
             - name: Check style
               run: npm run eslint
-    build_job:
-      runs-on: ubuntu-22.04
-      steps:
-        - name: build
-          run: npm run build
-    test_job:
-      runs-on: ubuntu-22.04
-      steps:
-        - name: test
-          run: npm run test
+            - name: build
+              run: npm run build
+            - name: test
+              run: npm run test
+
