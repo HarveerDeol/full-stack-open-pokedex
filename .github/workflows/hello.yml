@@ -11,16 +11,16 @@ jobs:
     steps:
       - name: Say hello
         run: |
-          echo "Hello World!",
+          echo "Hello World!"
   date_job:
     runs-on: ubuntu-22.04
     steps:
       - name: Get date
         run: |
-            date",
+            date
   directory_job:
     runs-on: ubuntu-22.04
     steps:
       - name: Print directory
         run: |
-            ls -l"
+            ls -l
