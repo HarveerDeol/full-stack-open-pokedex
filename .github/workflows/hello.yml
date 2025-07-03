@@ -1,32 +1,18 @@
-name: Hello World!
+name: Deployment pipeline
 
 on:
   push:
     branches:
       - main
-
 jobs:
-  hello_world_job:
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Say hello
-        run: |
-          echo "Hello World!"
-  date_job:
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Get date
-        run: |
-            date
-  directory_job:
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Print directory
-        run: |
-            ls -l
-  lint_job:
-    runs-on: ubuntu-22.04
-    steps:
-      - name: lint
-        run: |
-            npm run eslint
+    simple_deployment_pipeline:
+        runs-on: ubuntu-22.04
+        steps:
+            - uses: actions/checkout@v4
+            - uses: actions/setup-node@v4
+              with:
+                node-version: '22'
+            - name: Install dependencies
+              run: npm install
+            - name: Check style
+              run: npm run eslint
