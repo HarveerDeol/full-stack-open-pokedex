@@ -7,7 +7,8 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
-    'plugin:react/recommended'
+    'plugin:react/recommended',
+    'plugin:cypress/recommended'
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -15,6 +16,11 @@ module.exports = {
     },
     ecmaVersion: 2018,
     sourceType: 'module'
+  },
+  settings: {
+    react: {
+      'version': 'detect'
+    }
   },
   plugins: [
     'react',
