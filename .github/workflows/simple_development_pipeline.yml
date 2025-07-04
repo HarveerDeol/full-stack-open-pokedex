@@ -10,26 +10,26 @@ jobs:
     name: simple_deployment_pipeline
     runs-on: ubuntu-22.04
     steps:
-      # - uses: actions/checkout@v4
-      # - uses: actions/setup-node@v4
-      #   with:
-      #     node-version: '22'
-      # - name: Install dependencies
-      #   run: npm install --legacy-peer-deps
-      # - name: Check style
-      #   run: npm run eslint
-      # - name: build
-      #   run: npm run build
-      # - name: test
-      #   run: npm run test
-      # - name: e2e tests
-      #   uses: cypress-io/github-action@v5
-      #   with:
-      #     command: npm run test:e2e
-      #     start: npm run start-prod
-      #     wait-on: http://localhost:5001
-      - name: Render Deployment
-        uses: sws2apps/render-deployment@v1.8.0
-        with:
-          serviceId: ${{ secrets.RENDER_SERVICE_ID }}
-          apiKey: ${{ secrets.RENDER_API_KEY }}
+       - uses: actions/checkout@v4
+       - uses: actions/setup-node@v4
+         with:
+           node-version: '22'
+       - name: Install dependencies
+         run: npm install --legacy-peer-deps
+       - name: Check style
+         run: npm run eslint
+       - name: build
+         run: npm run build
+       - name: test
+         run: npm run test
+       - name: e2e tests
+         uses: cypress-io/github-action@v5
+         with:
+           command: npm run test:e2e
+           start: npm run start-prod
+           wait-on: http://localhost:5001
+       - name: Render Deployment
+         uses: sws2apps/render-deployment@v1.8.0
+         with:
+           serviceId: ${{ secrets.RENDER_SERVICE_ID }}
+           apiKey: ${{ secrets.RENDER_API_KEY }}
