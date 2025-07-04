@@ -26,4 +26,9 @@ jobs:
                 command: npm run test:e2e
                 start: npm run start-prod
                 wait-on: http://localhost:5001
-
+            - name: Trigger deployment
+              uses: sws2apps/render-deployment@main
+              with:
+                serviceId: ${{ 'd1k2k1fdiees73e0b3r0/deploys/dep-d1k31lidbo4c73evphk0' }}
+                apiKey: ${{ 'rnd_iQ6fQjw31CbKXKa7NlG6jTbbVvYg' }}
+                multipleDeployment: false #optional, default true
