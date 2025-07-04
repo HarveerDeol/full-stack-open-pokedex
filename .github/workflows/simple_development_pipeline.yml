@@ -30,6 +30,6 @@ jobs:
       - name: Trigger deployment
         uses: sws2apps/render-deployment@main
         with:
-          serviceId: '{d1k2k1fdiees73e0b3r0/deploys/dep-d1k31lidbo4c73evphk0}'
-          apiKey: '{rnd_iQ6fQjw31CbKXKa7NlG6jTbbVvYg}'
-
+          serviceId: ${{ secrets.RENDER_SERVICE_ID }}
+          apiKey: ${{ secrets.RENDER_API_KEY }}
+          multipleDeployment: false #optional, default true
