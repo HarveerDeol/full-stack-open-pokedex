@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/smartlyio/fullstackopen-cicd#readme",
   "devDependencies": {
+    "typescript": "5.8.3",
     "@babel/core": "^7.23.7",
     "@babel/plugin-transform-runtime": "^7.23.7",
     "@babel/preset-env": "^7.23.7",
